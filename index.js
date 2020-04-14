@@ -25,3 +25,12 @@ function reverseString(str) {
 
 console.log(reverseString('raf'));
 console.log(reverseString('lem'));
+
+// # 3 Write a function called reverseNumber that reverses a number.
+
+function reverseNumber(num) {
+  num = num + '';
+  return num.split('').reverse().join('');
+}
+
+console.log(reverseNumber(123456));
