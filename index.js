@@ -34,3 +34,19 @@ function reverseNumber(num) {
 }
 
 console.log(reverseNumber(123456));
+
+// # 4 Write a function that takes in a string, reverses the 'casing' of that string, and returns the "reversed-casing" string.
+
+function reverseCase(str) {
+  newString = '';
+  for (i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) {
+      newString += str[i].toLowerCase();
+    } else {
+      newString += str[i].toUpperCase();
+    }
+  }
+  return newString;
+}
+
+console.log(reverseCase('HELLO world'));
