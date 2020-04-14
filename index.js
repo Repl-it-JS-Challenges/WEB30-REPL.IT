@@ -50,3 +50,22 @@ function reverseCase(str) {
 }
 
 console.log(reverseCase('HELLO world'));
+
+// #5 Write a function called commonElements that has parameters for two arrays.  Return an array of all items that are present in both arrays.  Do not modify the arrays that are passed in.
+
+function commonElements(arr1, arr2) {
+  var dupes = [];
+  for (i = 0; i < arr1.length; i++) {
+    let itemOne = arr1[i];
+    for (j = 0; j < arr2.length; j++) {
+      let itemTwo = arr2[j];
+      if (itemOne === itemTwo) {
+        dupes.push(itemTwo);
+      }
+    }
+  }
+  return dupes;
+}
+arr1 = [1, 2, 3, 4, 5, 6, 7];
+arr2 = [3, 4, 5, 6];
+console.log(commonElements(arr1, arr2));
