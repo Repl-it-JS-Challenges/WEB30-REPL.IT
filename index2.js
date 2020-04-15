@@ -7,6 +7,11 @@ console.log(toCamelCase('the-stealth-warrior'));
 console.log(toCamelCase('The_stealth_warrior'));
 
 // #7 Write a function called sortString that takes a string of letters and returns a string with the letters sorted in alphabetical order.
-function sortString(str) {}
+function sortString(str) {
+  let arr = str.split('');
+  let alphabeticalArray = arr.sort();
+  let alphabeticalString = alphabeticalArray.join('');
+  return alphabeticalString;
+}
 
-sortString('AzycxbCwBaA');
+console.log(sortString('AzycxbCwBaA'));
