@@ -1,5 +1,3 @@
-// #9 - see instructions in repl.it
-
 // Don't modify this array of objects
 let arcadeGames = [
   {
@@ -59,6 +57,19 @@ let arcadeGames = [
 ];
 
 // Don't modify this function
-function titleMfrYearString(arr, index) {}
+function titleMfrYearString(arr, index) {
+  return `${arr[index].title} was made by ${arr[index].manufacturer} in ${arr[index].year}`;
+}
 
-function whoMadeWhatWhen(arr, mfrStr, cb) {}
+function whoMadeWhatWhen(arr, mfrStr, cb) {
+  const placeholderArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].manufacturer === mfrStr) {
+      placeholderArray.push(`${arr[i].title} was made by ${mfrStr} in ${arr[i].year}`);
+    }
+  }
+  return placeholderArray.length === 0 ? `We don't have anything by ${mfrStr} in our inventory` : placeholderArray;
+}
+
+console.log(whoMadeWhatWhen(arcadeGames, 'Williams', titleMfrYearString));
