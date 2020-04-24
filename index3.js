@@ -49,3 +49,16 @@ function vowelCount(str) {
 }
 
 console.log(vowelCount('Hello World!'));
+
+// to binary string -->  Given a positive (or 0) number, return a string of 1's and 0's representing it's binary value: toBinaryString(6) should return "110" (no leading 0).
+function toBinaryString(number) {
+  let binary = [];
+
+  if (!number) return '0';
+
+  for (let i = number; i > 0; i = Math.floor(i / 2)) {
+    binary.unshift(i % 2);
+  }
+
+  return binary.join('');
+}
